@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="220" viewBox="0 0 680 220" role="img" aria-labelledby="t d">
+<title id="t">A terminal blocking an agent</title>
+<desc id="d">An agent is asked to add SSO. It edits the session file, then tries to read .env. The protect-secrets hook exits 2 and the read is blocked.</desc>
+<style>
+.f{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-size:15px}
+.dim{fill:#64748b}.cmd{fill:#e2e8f0}.pmt{fill:#22d3ee}.path{fill:#cbd5e1}
+.ok{fill:#34d399}.acc{fill:#22d3ee}.bad{fill:#fb7185}.cmt{fill:#64748b;font-style:italic}
+.bold{font-weight:700}
+.typer{animation:type 12s steps(36) infinite}
+.l1{animation:r1 12s infinite}
+.l2{animation:r2 12s infinite}
+.l3{animation:r3 12s infinite}
+.l4{animation:r4 12s infinite}
+.l5{animation:r5 12s infinite}
+.cur{animation:cur 12s infinite}
+@keyframes type{0%,3.3%{transform:translateX(-364px)}18.3%,100%{transform:translateX(0)}}
+@keyframes r1{0%,95%{opacity:1}98%,100%{opacity:0}}
+@keyframes r2{0%,21.6%{opacity:0}21.7%,95%{opacity:1}98%,100%{opacity:0}}
+@keyframes r3{0%,27.4%{opacity:0}27.5%,95%{opacity:1}98%,100%{opacity:0}}
+@keyframes r4{0%,34%{opacity:0}34.2%,95%{opacity:1}98%,100%{opacity:0}}
+@keyframes r5{0%,43.2%{opacity:0}43.4%,95%{opacity:1}98%,100%{opacity:0}}
+@keyframes cur{0%,3.2%{fill-opacity:0}3.3%,18.3%{fill-opacity:1}18.4%,20%{fill-opacity:0}20.1%,21.5%{fill-opacity:1}21.6%,100%{fill-opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.typer{animation:none;transform:none}
+.l1,.l2,.l3,.l4,.l5{animation:none;opacity:1}
+.cur{animation:none;fill-opacity:0}
+}
+</style>
+<clipPath id="type"><rect class="typer" x="28" y="60" width="364" height="32"/></clipPath>
+<rect x=".5" y=".5" width="679" height="219" rx="10" fill="#0b1120" stroke="#1e293b"/>
+<circle cx="24" cy="23" r="5" fill="#334155"/><circle cx="42" cy="23" r="5" fill="#334155"/><circle cx="60" cy="23" r="5" fill="#334155"/>
+<line x1="1" y1="45" x2="679" y2="45" stroke="#1e293b"/>
+<text class="f" x="86" y="28" font-size="12" fill="#475569">nguyenhx2 / agent-harness-bootstrap</text>
+<g clip-path="url(#type)"><text class="f l1" x="28" y="80" xml:space="preserve"><tspan class="pmt">$ </tspan><tspan class="cmd">claude "add SSO to the login flow"</tspan><tspan class="cur cmd">_</tspan></text></g>
+<text class="f l2" x="28" y="106" xml:space="preserve"><tspan class="dim">  edit  </tspan><tspan class="path">src/auth/session.ts</tspan><tspan class="ok">     ok</tspan></text>
+<text class="f l3" x="28" y="132" xml:space="preserve"><tspan class="dim">  read  </tspan><tspan class="path">.env</tspan></text>
+<text class="f l4" x="28" y="158" xml:space="preserve"><tspan class="dim">  hook  </tspan><tspan class="acc">protect-secrets</tspan><tspan class="bad">   exit 2   BLOCKED</tspan></text>
+<text class="f cmt l5" x="28" y="196" xml:space="preserve">  # a shell script said no, not the model's judgment</text>
+</svg>
