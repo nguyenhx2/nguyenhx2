@@ -3,29 +3,27 @@
   <i>Building software. Recording lessons. Sharing knowledge.</i>
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/nguyenhx2/nguyenhx2/main/assets/guardrail.svg" width="680" alt="Terminal session: an agent is asked to add SSO to the login flow. It edits src/auth/session.ts and succeeds, then tries to read .env. The protect-secrets hook exits 2 and the read is BLOCKED. A shell script said no, not the model's judgment.">
-</p>
-
 ---
 
-I build the frame around the work, not just the work.
+I work on AI engineering and cloud, and I write down what the work teaches.
 
-An AI agent allowed to edit anything will eventually edit the wrong thing. A spec nobody can grep drifts by the fortieth document. A lesson that lives in one person's head gets learned again on the next project, at full price. So the guardrail ships with the feature, the requirement ID ships with the requirement, and the note ships with the incident.
+Most of what I build sits around the work rather than inside it: the harness a coding agent runs in, the spec a team and a model can both read the same way, the note that stops the next project paying for the same lesson twice. Every system leaves a trace, and most of that trace disappears when the project ends. I try to keep it.
 
-**[agent-harness-bootstrap](https://github.com/nguyenhx2/agent-harness-bootstrap)** - two Claude Code skills. `spec-builder` turns an idea, a transcript or a pile of legacy docs into a contract you and the AI both read the same way. `harness-bootstrap` reads your repo and generates the `.claude/` frame the agent runs inside. The guardrails are hooks and deny rules: shell scripts, exit codes, glob matching. Not one of them asks the model, so swapping every agent from Opus to Haiku leaves the safety floor byte-identical. The [guardrail eval](https://github.com/nguyenhx2/agent-harness-bootstrap/tree/main/eval) runs 69/69 per hook flavor, 138/138 with the bash and PowerShell hooks both installed. Thirty-five of those cases check the inverse: that the harness does not block legitimate work, and that a malformed payload does not make a hook crash. A hook that crashes fails open, which looks like protection and provides none.
+**What I focus on**
 
-<sub>Start here: **[what it does](https://github.com/nguyenhx2/agent-harness-bootstrap#-what-it-does)** - four failure modes of an unmanaged agent and what stops each one. Then [the quickstart](https://github.com/nguyenhx2/agent-harness-bootstrap#-quickstart), or [the slides](https://nguyenhx2.github.io/agent-harness-bootstrap/presentation/) if you would rather be shown.</sub>
+- **Agents in production** - harnesses, specs and guardrails for AI coding agents. Rules that fail the build, not rules that advise.
+- **Cloud as an operating model, not a place** - the useful question is rarely "is cloud better", it is who should carry a particular risk and what it is worth to hand it over.
+- **Writing it down** - in English, Vietnamese and Japanese, because a lesson only counts if the reader can read it.
 
-**[Engineering Journal](https://www.engineeringjournal.dev/)** - a living notebook for modern engineering. Notes from actually building the thing. Not a news blog.
+**What I am working on**
 
-**[From Ground to Cloud](https://fromgroundtocloud.com/)** - a vendor-neutral guide to cloud computing, published in English, Vietnamese and Japanese. Cloud is not a place, it is an operating model.
+- **[agent-harness-bootstrap](https://github.com/nguyenhx2/agent-harness-bootstrap)** - two Claude Code skills. One turns an idea, a transcript or a pile of legacy docs into a spec. The other reads your repo and generates the `.claude/` frame the agent runs inside.
+- **[Engineering Journal](https://www.engineeringjournal.dev/)** - a living notebook for modern engineering. Notes from actually building the thing. Not a news blog.
+- **[From Ground to Cloud](https://fromgroundtocloud.com/)** - an open, vendor-neutral guide to cloud computing, in English, Vietnamese and Japanese.
+- **[ost](https://github.com/nguyenhx2/ost)** - a desktop on-screen translator: local speech-to-text, screen-region OCR, bring your own model keys. Rust and Tauri, early.
+- Smaller public things: **[ggchat-manager](https://github.com/nguyenhx2/ggchat-manager)** for running Google Chat at scale, **[Antigravity-AutoPilot](https://github.com/nguyenhx2/Antigravity-AutoPilot)**, **[Claude-Telex](https://github.com/nguyenhx2/Claude-Telex)**.
 
-Also public: **[ggchat-manager](https://github.com/nguyenhx2/ggchat-manager)**, a self-hosted tool for Google Chat at scale - bulk membership changes, message revoke, and a conversation export that opens as one standalone HTML file. **[Antigravity-AutoPilot](https://github.com/nguyenhx2/Antigravity-AutoPilot)** ([npm](https://www.npmjs.com/package/antigravity-autopilot)) does the opposite of the harness on purpose: it auto-approves every tool call and terminal command in Antigravity, for the throwaway repos where a confirmation prompt buys you nothing.
-
----
-
-Three rules I hold myself to:
+**Three rules I hold myself to**
 
 - An unknown never becomes an invented fact. It becomes a flagged assumption with a named owner.
 - If a rule matters, make it fail the build. Advice that only advises gets ignored.
@@ -36,9 +34,22 @@ Three rules I hold myself to:
 
 <br>
 
-仕事そのものだけでなく、その周りの枠組みを作っています。何でも編集できるAIエージェントは、いずれ編集してはいけないものを編集します。grepできない仕様書は、40本目のドキュメントで必ずずれます。誰かの頭の中だけにある教訓は、次のプロジェクトで同じ代償を払って学び直すことになります。だから機能にはガードレールを、要件には要件IDを、障害にはその記録を添えて出します。
+AIエンジニアリングとクラウドを中心に開発し、そこで学んだことを書き残しています。
 
-**[agent-harness-bootstrap](https://github.com/nguyenhx2/agent-harness-bootstrap)** はClaude Code向けの2つのスキルです。ガードレールはフックとdenyルール、つまりシェルスクリプトと終了コードで実装されており、モデルの判断には一切依存しません。全エージェントをOpusからHaikuに入れ替えても、安全性の下限はバイト単位で変わりません。ガードレールevalはフック方式ごとに69/69、bashとPowerShellの両方を入れた場合は138/138で通ります。
+作っているものの多くは、仕事そのものよりもその周りにあります。コーディングエージェントが動く枠組み、人とモデルが同じように読める仕様書、次のプロジェクトが同じ授業料を払わずに済むための記録です。システムは必ず痕跡を残しますが、その多くはプロジェクトが終わると消えてしまいます。それを残しておきたいと思っています。
+
+**取り組んでいる分野**
+
+- **本番環境でのAIエージェント** - ハーネス、仕様、ガードレール。助言するだけのルールではなく、ビルドを止めるルールを。
+- **クラウドは場所ではなく運用モデル** - 問うべきは「クラウドが優れているか」ではなく、そのリスクを誰が負い、手放す価値がいくらあるかです。
+- **書き残すこと** - 英語・ベトナム語・日本語で。読み手が読めなければ、教訓は残らないからです。
+
+**取り組んでいるもの**
+
+- **[agent-harness-bootstrap](https://github.com/nguyenhx2/agent-harness-bootstrap)** - Claude Code向けの2つのスキル。アイデアや議事録、レガシー資料から仕様を作り、エージェントが動く `.claude/` の枠組みをリポジトリに合わせて生成します。
+- **[Engineering Journal](https://www.engineeringjournal.dev/)** - 現代のエンジニアリングのための「生きたノート」。実際に作った経験からの記録です。
+- **[From Ground to Cloud](https://fromgroundtocloud.com/)** - ベンダーニュートラルなクラウド入門。英語・ベトナム語・日本語。
+- **[ost](https://github.com/nguyenhx2/ost)** - 画面と音声をその場で翻訳するデスクトップアプリ。ローカル音声認識と画面OCR、APIキーは自分のものを使います。Rust + Tauri、開発初期。
 
 </details>
 
