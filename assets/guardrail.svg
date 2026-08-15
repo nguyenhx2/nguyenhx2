@@ -13,13 +13,13 @@
 .l4{animation:r4 12s infinite}
 .l5{animation:r5 12s infinite}
 .cur{animation:cur 12s infinite}
-@keyframes type{0%,3.3%{transform:translateX(-364px)}18.3%,100%{transform:translateX(0)}}
-@keyframes r1{0%,95%{opacity:1}98%,100%{opacity:0}}
-@keyframes r2{0%,21.6%{opacity:0}21.7%,95%{opacity:1}98%,100%{opacity:0}}
-@keyframes r3{0%,27.4%{opacity:0}27.5%,95%{opacity:1}98%,100%{opacity:0}}
-@keyframes r4{0%,34%{opacity:0}34.2%,95%{opacity:1}98%,100%{opacity:0}}
-@keyframes r5{0%,43.2%{opacity:0}43.4%,95%{opacity:1}98%,100%{opacity:0}}
-@keyframes cur{0%,3.2%{fill-opacity:0}3.3%,18.3%{fill-opacity:1}18.4%,20%{fill-opacity:0}20.1%,21.5%{fill-opacity:1}21.6%,100%{fill-opacity:0}}
+@keyframes type{0%,52%{transform:translateX(0)}53%,56%{transform:translateX(-364px)}71%,100%{transform:translateX(0)}}
+@keyframes r1{0%,52%{opacity:1}53%,55%{opacity:0}56%,100%{opacity:1}}
+@keyframes r2{0%,52%{opacity:1}53%,73%{opacity:0}74%,100%{opacity:1}}
+@keyframes r3{0%,52%{opacity:1}53%,78%{opacity:0}79%,100%{opacity:1}}
+@keyframes r4{0%,52%{opacity:1}53%,83%{opacity:0}84%,100%{opacity:1}}
+@keyframes r5{0%,52%{opacity:1}53%,89%{opacity:0}90%,100%{opacity:1}}
+@keyframes cur{0%,52%{fill-opacity:0}56%,71%{fill-opacity:1}72%,100%{fill-opacity:0}}
 @media (prefers-reduced-motion:reduce){
 .typer{animation:none;transform:none}
 .l1,.l2,.l3,.l4,.l5{animation:none;opacity:1}
